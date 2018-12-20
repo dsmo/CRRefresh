@@ -20,7 +20,8 @@ class ViewController: BaseViewController {
         Refresh(model: .init(icon: #imageLiteral(resourceName: "Image_1"), title: "NormalAnimator", subTitle: "普通刷新控件"), header: .nomalHead, footer: .nomalFoot),
         Refresh(model: .init(icon: #imageLiteral(resourceName: "Image_2"), title: "SlackLoadingAnimator", subTitle: "SlackLoading的刷新控件"), header: .slackLoading, footer: .slackLoading),
         Refresh(model: .init(icon: #imageLiteral(resourceName: "Image_3"), title: "RamotionAnimator", subTitle: "Ramotion的刷新控件"), header: .ramotion, footer: .nomalFoot),
-        Refresh(model: .init(icon: #imageLiteral(resourceName: "Image_1"), title: "FastAnimator", subTitle: "FastAnimator的刷新控件"), header: .fast, footer: .nomalFoot)
+        Refresh(model: .init(icon: #imageLiteral(resourceName: "Image_1"), title: "FastAnimator", subTitle: "FastAnimator的刷新控件"), header: .fast, footer: .nomalFoot),
+        Refresh(model: .init(icon: #imageLiteral(resourceName: "Image_1"), title: "CoinAnimator", subTitle: "CoinAnimator的刷新控件"), header: .coin, footer: .nomalFoot)
     ]
 
 
@@ -98,6 +99,8 @@ struct Refresh {
         case ramotion
         // fast动画
         case fast
+        // coin动画
+        case coin
         
         func commont() -> CRRefreshProtocol {
             switch self {
@@ -111,6 +114,8 @@ struct Refresh {
                 return RamotionAnimator()
             case .fast:
                 return FastAnimator()
+            case .coin:
+                return CoinAnimator()
             }
         }
     }

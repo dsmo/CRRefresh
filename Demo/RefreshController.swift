@@ -33,7 +33,7 @@ class RefreshController: BaseViewController {
         return table
     }()
     
-    var count: Int = 10
+    var count: Int = 1
     
     var refresh: Refresh
     
@@ -65,7 +65,7 @@ class RefreshController: BaseViewController {
         tableView.cr.addHeadRefresh(animator: refresh.header.commont()) { [weak self] in
             print("开始刷新")
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                self?.count = 10
+                self?.count = 2
                 self?.tableView.cr.endHeaderRefresh()
                 self?.tableView.cr.resetNoMore()
                 self?.tableView.reloadData()
@@ -77,7 +77,7 @@ class RefreshController: BaseViewController {
         tableView.cr.addFootRefresh(animator: refresh.footer.commont()) { [weak self] in
             print("开始加载")
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                self?.count += 10
+                self?.count += 2
                 self?.tableView.cr.noticeNoMoreData()
                 self?.tableView.reloadData()
             })
