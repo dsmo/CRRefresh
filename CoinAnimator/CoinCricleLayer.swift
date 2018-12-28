@@ -14,7 +14,7 @@ class CoinCircleLayer: CALayer {
         didSet {
             CATransaction.begin()
             CATransaction.setDisableActions(true)
-            let realProgress = min(max(0.0, (progress - 0.4) / 0.6), 1.0)
+            let realProgress = min(max(0.0, (progress - 0.5) / 0.5), 1.0)
             circleShape.strokeEnd = CGFloat(realProgress)
             CATransaction.commit()
             

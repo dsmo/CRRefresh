@@ -61,9 +61,9 @@ class CoinImageLayer: CALayer {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.y")
         rotationAnimation.beginTime = beginTime
         rotationAnimation.fromValue = 0.0
-        rotationAnimation.toValue = Double.pi * 2.0
+        rotationAnimation.toValue = Double.pi
         rotationAnimation.duration = CoinAnimator.coinRotationAnimationDuration
-        rotationAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        rotationAnimation.timingFunction = CAMediaTimingFunction(name: .easeIn)
         rotationAnimation.setValue("rotationAnimation", forKey: "Identifier")
         rotationAnimation.delegate = self
         

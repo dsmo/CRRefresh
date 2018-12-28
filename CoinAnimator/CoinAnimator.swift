@@ -12,7 +12,7 @@ open class CoinAnimator: UIView, CRRefreshProtocol {
     
     static let circleDisappearAnimationDuration: CFTimeInterval = 0.1
     static let coinAppearAnimationDuration: CFTimeInterval = 0.4
-    static let coinRotationAnimationDuration: CFTimeInterval = 0.6
+    static let coinRotationAnimationDuration: CFTimeInterval = 0.3
     
     private lazy var animationLayer: CoinAnimationLayer = CoinAnimationLayer()
     
@@ -63,7 +63,7 @@ open class CoinAnimator: UIView, CRRefreshProtocol {
     
     open var execute: CGFloat = 55.0
     
-    open var endDelay: CGFloat = 1.1
+    open var endDelay: CGFloat = 0.7
     
     open var hold: CGFloat = 55.0
     
